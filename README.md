@@ -55,8 +55,7 @@ You are provided with:
 ### Running the application
 1. cd to devops-starter , this should automatically create the virtual env if it didn't exist
 2. Install all required dependencies using `pip install -r requirements.txt`
-3. `pytest tests/test_unit.py` to run the unit tests
-4. After containerizing the application (Not done) & spinning up a postgres db, run `pytest tests/test_api.py` and `pytest tests/test_models/py` 
-
+3. `pytest tests/unit` to run the unit tests
+4. After containerizing the application (Not done) & spinning up a postgres db, run `pytest tests/integration`
 
 
