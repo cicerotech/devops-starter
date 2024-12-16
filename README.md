@@ -56,6 +56,7 @@ You are provided with:
 1. cd to devops-starter , this should automatically create the virtual env if it didn't exist
 2. Install all required dependencies using `pip install -r requirements.txt`
 3. `pytest tests/unit` to run the unit tests
+3. `uvicorn src.main:app --host 0.0.0.0 --port 8000`  to start the server
 4. After containerizing the application (Not done) & spinning up a postgres db, run `pytest tests/integration`
 
 
