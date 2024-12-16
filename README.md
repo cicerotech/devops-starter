@@ -28,9 +28,12 @@ You are tasked with containerizing and deploying a Python-based REST API applica
 - Working containerized application deployed on AWS
 - Infrastructure as Code  - Please pick whichever IaC is required eg: Pulumi / Terraform / AWS CDK
 - CI/CD pipeline configuration
+- [Bonus] Commit hooks to format and lint code
 
 ### Notes
 - Focus on building a production-ready solution
+  - https is optional
+  - Consider network security when setting up DB , App etc. 
 - Make reasonable assumptions where requirements are unclear
 - Feel free to ask questions or discuss with the team during the exercise
 - Document any assumptions made
@@ -38,7 +41,11 @@ You are tasked with containerizing and deploying a Python-based REST API applica
 ### Starting Point
 You are provided with:
 
-1. A Python application using FastAPI framework
+1. A Python application using FastAPI framework with the following endpoints
+  - GET /book/:id
+  - GET /books
+  - POST /books 
+  - GET /health 
 2. Unit and integration tests
 3. Basic documentation of the API endpoints
 4. Access to necessary AWS credentials. Ask a team member for help to login if session expires
@@ -46,6 +53,10 @@ You are provided with:
   - use profile `--profile guest-power-user` for aws commands. for eg, `aws s3 ls --profile guest-power-user` 
 
 ### Running the application
-1. 
+1. cd to devops-starter , this should automatically create the virtual env if it didn't exist
+2. Install all required dependencies using `pip install -r requirements.txt`
+3. `pytest tests/test_unit.py` to run the unit tests
+4. After containerizing the application (Not done) & spinning up a postgres db, run `pytest tests/test_api.py` and `pytest tests/test_models/py` 
+
 
 
