@@ -50,7 +50,7 @@ You are provided with:
 3. Basic documentation of the API endpoints
 4. Access to necessary AWS credentials. Ask a team member for help to login if session expires
   - `aws sso login --sso guest-user-sso`
-  - use profile `--profile guest-power-user` for aws commands. for eg, `aws s3 ls --profile guest-power-user` 
+  - use profile `--profile guest-admin-user` for aws commands. for eg, `aws s3 ls --profile guest-admin-user` 
 
 ### Running the application
 1. cd to devops-starter , this should automatically create the virtual env if it didn't exist
